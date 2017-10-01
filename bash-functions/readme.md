@@ -4,65 +4,78 @@ These bash functions get added to the linux users .bashrc, almost all of these f
 
 ### Bash Functions ###
 
-Display the running processes inside of a docker container
 **function dockertop()**
 
+Display the running processes inside of a docker container
+
 ----------
 
-Display some stats about a docker container
 **function dockerstats()**
 
+Display some stats about a docker container
+
 ----------
 
-Easy way to connect into a docker container
 **function dockerconn()**
 
+Easy way to connect into a docker container
+
 ----------
 
-Show the logs for a docker container
 **function dockerlog()**
 
+Show the logs for a docker container
+
 ----------
 
-This beast gathers information on running containers from multiple docker commands and displays it in way that is friendly for my other scripts.
 **function dockerlabelsscript()**
 
+This beast gathers information on running containers from multiple docker commands and displays it in way that is friendly for my other scripts.
+
 ----------
 
-Gets memory used by container, used for my DockerMemoryMon.sh script
 **function dockerstatsscript()**
 
+Gets memory used by container, used for my DockerMemoryMon.sh script
+
 ----------
 
-Extract some custom labels we have on containers.
 **function labellooker()**
 
+Extract some custom labels we have on containers
+
 ----------
 
-Display all running docker containers, in my case we want to display the registrator container first.
 **function getRunning()**
 
+Display all running docker containers, in my case we want to display the registrator container first.
+
 ----------
 
-Displays how much devicemapper space is available, used and total for docker host.
 **function devicemapperget()**
 
+Displays how much devicemapper space is available, used and total for docker host.
+
 ----------
 
-Display the number of restarts that have happened for a container in a non-swarm env. if you reach the restart count limit it will not start back up and you will have to redeloy.
 **function DockerRestartCount()**
 
+Display the number of restarts that have happened for a container in a non-swarm env. if you reach the restart count limit it will not start back up and you will have to redeloy.
+
 ----------
 
-This will delete heap dumps from inside containers, used for node.js apps in docker containers. While this will remove the heaps it will not free up the space on the device mapper FS until you stop them and docker system purge/docker rm container. If using device mapper be sure to monitor it, when it fills up you will have to rebuild the LVM.
 **function DockerHeapCleanUp()**
 
+This will delete heap dumps from inside containers, used for node.js apps in docker containers. While this will remove the heaps it will not free up the space on the device mapper FS until you stop them and docker system purge/docker rm container. If using device mapper be sure to monitor it, when it fills up you will have to rebuild the LVM.
+
 ----------
 
-Experimental only, cp'ing files out of an cotainer fails to work as expected.
 **function DockerTakeHeapDump()**
 
+Experimental only, cp'ing files out of an cotainer fails to work as expected.
+
 ----------
 
-Millage will vary with this depending on how you use docker secrets.
 **function SecretKitty()**
+
+Millage will vary with this depending on how you use docker secrets.
